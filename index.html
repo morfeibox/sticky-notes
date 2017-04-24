@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Notes</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#eaf7f7",
+                        "text": "#5c7291"
+                    },
+                    "button": {
+                        "background": "#56cbdb",
+                        "text": "#ffffff"
+                    }
+                }
+            })});
+    </script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <a role="button" id="create-button"><i class="fa fa-plus-circle rotate" aria-hidden="true"></i></a>
+
+    <div id="stickynote-template" class="stickynote">
+
+        <a href="javascript:delete_cookie(name);" class="close-icon"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <span class="drag-icon"><i class="fa fa-arrows" aria-hidden="true"></i></span>
+        <div class="stickynote-cont">
+            <textarea placeholder="What's on your mind?" maxlength="100"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center section">
+    <span>To Do</span>
+        </div>
+        <div class="col-md-4 text-center section">
+    <span>In Progress</span>
+        </div>
+        <div class="col-md-4 text-center section">
+            <span>Done</span>
+
+        </div>
+    </div>
+    <div class="info-icon" title="We are using cookie to AUTOSAVE your sticky notes. Unfortunately, reinstalling your browser,operating system or some other events may lead to information lost."><i class="fa fa-info-circle" aria-hidden="true" ></i></div>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+<footer>
+    <div class="row">
+                <div class="col-md-6 ">
+            <div > coded By Atanas Beychev <a href="https://github.com/morfeibox" role="button" target='_blank'><i  class="fa fa-github git" aria-hidden="true" aria-hidden="true">
+    </i></a></div>
+                </div>
+            <div class="col-md-6 facebook-share-like">
+                <div class="fb-like" data-href="http://notes.abeychev.tk/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            </div>
+
+    </div>
+</footer>
+</html>
